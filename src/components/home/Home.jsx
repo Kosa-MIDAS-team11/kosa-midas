@@ -7,16 +7,13 @@ import {
   AnalysisContainer,
 } from "./Home.style";
 import MemberListItem from "../commmon/MemberListItem";
-import MyTimeAnalysis from "../analysis/MyTimeAnalysis";
 
 const Home = () => {
   return (
     <>
       <Header />
       <HomeContainer>
-        <AnalysisContainer>
-          <MyTimeAnalysis />
-        </AnalysisContainer>
+        <AnalysisContainer></AnalysisContainer>
         <MemberListContainer>
           <MemberList>
             <MemberListItem></MemberListItem>
