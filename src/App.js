@@ -1,18 +1,12 @@
-import styled from 'styled-components'
-import { Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 export default function App() {
   return (
-    <Container>
+    <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
       </Routes>
-    </Container>
-  )
+    </>
+  );
 }
-
-const Container = styled.div`
-  width:100%;
-  min-height:100%;
-`
