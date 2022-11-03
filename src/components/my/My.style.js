@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const MemberWrap = styled.div`
   display: flex;
-  /* background-color: #000; */
 `;
 
 export const MemberAnalysis = styled.div`
@@ -20,15 +19,12 @@ export const MemberInfoContainer = styled.div`
 export const MemberNameWrap = styled.div`
   width: 100%;
   height: 50px;
-  /* background-color: #000; */
 `;
 
 export const MemberName = styled.div`
   margin-top: 30px;
-  /* text-align: center; */
   width: 30%;
   height: 30px;
-  /* background-color: gold; */
   padding-top: 10px;
   margin-left: 40px;
   font-size: 30px;
@@ -40,14 +36,12 @@ export const MemberInnerWrap = styled.div`
   margin-top: 30px;
   width: 100%;
   height: 90px;
-  /* background-color: royalblue; */
 `;
 
 export const MemberTeamWrap = styled.div`
   display: flex;
   width: 100%;
   height: 50%;
-  /* background-color: blueviolet; */
 `;
 
 export const MemberTeam = styled.div`
@@ -69,7 +63,6 @@ export const TeamName = styled.div`
   padding-top: 10px;
   color: #fff;
   font-size: 20px;
-  /* background-color: chartreuse; */
 `;
 
 export const MemberMailWrap = styled.div`
@@ -77,7 +70,6 @@ export const MemberMailWrap = styled.div`
   width: 400px;
   height: 50%;
   margin-left: 40px;
-  /* background-color: beige; */
 `;
 
 export const MemberMail = styled.div`
@@ -97,20 +89,14 @@ export const MailAddress = styled.div`
   margin-left: 10px;
   padding-top: 10px;
   font-size: 20px;
-  /* background-color: darksalmon; */
   color: #fff;
 `;
 
 export const MemberBtnWrap = styled.div`
   display: flex;
-  /* margin-top: 400px; */
-  /* margin-left: 60px; */
   justify-content: flex-end;
-  /* padding-top: 50px; */
-  /* margin-top: 20px; */
   width: 100%;
   height: 55px;
-  /* background-color: coral; */
 `;
 
 export const InfoChange = styled.div`
@@ -138,7 +124,6 @@ export const OfficeStatusWrap = styled.div`
   width: 350px;
   height: 200px;
   margin-left: 40px;
-  /* background-color: cornsilk; */
 `;
 
 export const WorkAtHome = styled.div`
