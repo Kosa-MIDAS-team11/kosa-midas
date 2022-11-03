@@ -2,6 +2,7 @@ import * as S from './HomeStyle';
 import webBg from "../../assests/gif/webBg.jpg"
 import { useState } from 'react';
 import { adminSignInReq, userLogInReq, adminSecondAuthReq } from "../../hooks/auth/useLogin"
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [isLoginOn, setIsLoginOn] = useState(false);
@@ -12,6 +13,7 @@ export default function Home() {
   const [phoneNum, setPhoneNum] = useState(0);
   const [email, setEmail] = useState("");
   const [code, setCode] = useState("");
+  const navigate = useNavigate();
 
   return (
     <S.Container>
@@ -53,16 +55,26 @@ export default function Home() {
             setIsSigninOn(true);
             if (isSigninOn) {
               if (isDoneSecAuth) {
-                // userLogInReq(email, pwd);
+                adminSignInReq(userName, email, pwd, phoneNum);
               } else {
-                setIsDoneSecAuth(adminSecondAuthReq(code)); // qwer1234
+                adminSecondAuthReq(code).then((result) => {
+                  if (result) {
+                    setIsDoneSecAuth(true);
+                  }
+                })
               }
             };
           }} style={{ backgroundColor: "#6E9024" }}>회원가입</S.LoginBtn>
           <S.LoginBtn onClick={() => {
             setIsSigninOn(false);
             setIsLoginOn(true);
-            // if (isLoginOn) adminSignInReq(userName, email, pwd, phoneNum);
+            if (isLoginOn) {
+              userLogInReq(email, pwd).then((result) => {
+                if (result) {
+                  navigate("/division");
+                }
+              })
+            };
           }} style={{ backgroundColor: "#192F7E" }}>로그인</S.LoginBtn>
         </S.LoginWrap>
       </S.SideBar>

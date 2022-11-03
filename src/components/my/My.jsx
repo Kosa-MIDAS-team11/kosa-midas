@@ -31,6 +31,7 @@ import {
   ModalReqBtn,
   ModalReqBtnWrap
 } from "./My.style";
+import { useSearchParams } from "react-router-dom";
 
 const My = () => {
   const [onHomeModal, setOnHomeModal] = useState(false);
@@ -38,9 +39,17 @@ const My = () => {
   const [code, setCode] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  let [searchParams, setSearchParams] = useSearchParams();
+
   useEffect(() => {
     console.log(startDate, endDate);
+    
   }, [startDate, endDate])
+
+  useEffect(() => {
+    console.log(searchParams);
+  }, [])
+
   return (
     <>
       <Header />

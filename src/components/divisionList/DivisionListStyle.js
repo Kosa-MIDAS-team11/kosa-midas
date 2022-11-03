@@ -5,9 +5,9 @@ export const Container = styled.div`
 `
 export const DivList = styled.section`
   cursor: pointer;
-  width:calc((100% / 3) - 48px);
+  width:calc((100% / 3) - 36px);
   height:calc(20vw - 48px);
-  padding: 36px;
+  padding: 24px;
   padding-top:24px;
   padding-bottom: 0px;
   padding-right: 0px;
@@ -114,4 +114,65 @@ export const EditDivWrap = styled.div`
     border-radius: 4px;
     cursor: pointer;
   }
+`
+
+export const WorkHomeReqBg = styled.div`
+  position: fixed;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  top:0px;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+`
+export const WorkHomeReq = styled.div`
+  width:380px;
+  background-color: #353535;
+  z-index: 11;
+  padding: 20px;
+`
+export const WorkHomeReqTitle = styled.h1`
+  color:white;
+  font-size: 28px;
+`
+export const ModalHeader = styled.div`
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+`
+export const ModalContent = styled.div`
+  display:flex;
+  flex-direction: column;
+  margin-top: 16px;
+`
+export const ModalDateInput = styled.input`
+  color:black;
+  padding: 6px;
+  margin-left: 16px;
+`
+export const DateSetting = styled.div`
+  display:flex;
+  align-items: center;
+  margin-top: 16px;
+  h1{
+    font-size: 18px;
+  }
+`
+export const ModalReqBtn = styled.button`
+  margin-top: 36px;
+  padding: 8px 20px;
+  font-size: 16px;
+  color:white;
+  background-color: #3856F5;
+  outline: none;
+  border:none;
+  cursor: pointer;
+`
+export const ModalReqBtnWrap = styled.div`
+  width:100%;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
 `
