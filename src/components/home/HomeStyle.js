@@ -40,7 +40,7 @@ export const DescriptWrap = styled.div`
   display:flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15vh;
+  margin-top: 7vh;
 `
 export const Descript = styled.h1`
   font-size: 28px;
@@ -61,10 +61,10 @@ export const LoginBtn = styled.button`
   cursor: pointer;
   color:white;
   width:80%;
-  padding:20px;
+  padding:16px;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   border-radius: 12px;
 `
 export const Title = styled.strong`
@@ -88,6 +88,6 @@ export const LoginInput = styled.input`
   font-size: 16px;
   width:81%;
   padding:16px 20px;
-  margin-top: 24px;
+  margin-top: 20px;
   border-radius:6px;
 `

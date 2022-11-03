@@ -1,21 +1,14 @@
 import * as S from './HomeStyle';
 import webBg from "../../assests/gif/webBg.jpg"
 import { useState } from 'react';
+import { signInReq, logInReq } from "../../hooks/auth/useLogin"
 
 export default function Home() {
   const [isLoginOn, setIsLoginOn] = useState(false);
-  const [id, setId] = useState("");
   const [pwd, setPwd] = useState("");
-
-  const loginFunction = (isSign) => {
-    if (isLoginOn) {
-      if (id !== "" && pwd !== "") {
-        if (isSign) { // isSign true면 회원가입 false면 로그인
-          console.log(id, pwd);
-        }
-      }
-    } else setIsLoginOn(true);
-  }
+  const [userName, setUserName] = useState("");
+  const [phoneNum, setPhoneNum] = useState(0);
+  const [email, setEmail] = useState("");
 
   return (
     <S.Container>
@@ -34,15 +27,23 @@ export default function Home() {
           {
             isLoginOn
               ? <>
-                <S.LoginInput onChange={(e) => { setId(e.target.value) }} placeholder='아이디' />
-                <S.LoginInput onChange={(e) => { setPwd(e.target.value) }} placeholder='비밀번호' />
+                <S.LoginInput type="text" onChange={(e) => { setUserName(e.target.value) }} placeholder='이름' />
+                <S.LoginInput type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder='이메일' />
+                <S.LoginInput type="number" onChange={(e) => { setPhoneNum(e.target.value) }} placeholder='전화번호' />
+                <S.LoginInput type="password" onChange={(e) => { setPwd(e.target.value) }} placeholder='비밀번호' />
                 {/* <S.LoginInput placeholder='2차인증' /> */}
               </> : null
           }
         </S.DescriptWrap>
         <S.LoginWrap>
-          <S.LoginBtn onClick={() => { loginFunction(true) }} style={{ backgroundColor: "#6E9024" }}>회원가입</S.LoginBtn>
-          <S.LoginBtn onClick={() => { loginFunction(false) }} style={{ backgroundColor: "#192F7E" }}>로그인</S.LoginBtn>
+          <S.LoginBtn onClick={() => {
+            setIsLoginOn(true);
+            if (isLoginOn) signInReq(userName, email, pwd, phoneNum);
+          }} style={{ backgroundColor: "#6E9024" }}>회원가입</S.LoginBtn>
+          <S.LoginBtn onClick={() => {
+            setIsLoginOn(true);
+            if (isLoginOn) logInReq(userName, email, pwd, phoneNum);
+          }} style={{ backgroundColor: "#192F7E" }}>로그인</S.LoginBtn>
         </S.LoginWrap>
       </S.SideBar>
     </S.Container>
