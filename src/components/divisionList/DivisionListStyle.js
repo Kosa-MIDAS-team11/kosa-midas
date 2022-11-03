@@ -76,7 +76,7 @@ export const DivInformValue = styled.h1`
 `
 export const AddDiv = styled.h1`
   color:black;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 `
 export const PeopleWrap = styled.div`
@@ -88,6 +88,7 @@ export const PeopleWrap = styled.div`
   display:flex;
   justify-content: space-between;
   border-radius: 8px;
+  cursor: pointer;
 `
 export const PeopleName = styled.h1`
   font-size: 24px;
@@ -101,4 +102,27 @@ export const PeopleInformWrap = styled.div`
   display:flex;
   flex-direction: column;
   align-items: flex-end;
+`
+export const DivPeopleTitle = styled.h1`
+  font-size: 20px;
+  color:white;
+  font-weight: 600;
+  margin-left: 24px;
+  margin-top: 12px;
+`
+export const EditDivWrap = styled.div`
+  display:flex;
+  justify-content: space-between;
+  width:calc(100% - 48px);
+  margin: 24px;
+  h2{
+    width:35%;
+    padding: 8px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 `
