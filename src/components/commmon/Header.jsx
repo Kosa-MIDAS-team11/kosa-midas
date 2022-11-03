@@ -1,11 +1,11 @@
 import react from "react";
-import { HeaderContainer } from "./Header.style";
+import { HeaderContainer, Title } from "./Header.style";
 
 const Header = () => {
   return (
-    <>
-      <HeaderContainer>aaa</HeaderContainer>
-    </>
+    <HeaderContainer>
+      <Title>With Office</Title>
+    </HeaderContainer>
   );
 };
 

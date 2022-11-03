@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import DivisionList from "./pages/DivisionListPage";
+import MyPage from "./pages/MyPage"
 
 export default function App() {
   return (

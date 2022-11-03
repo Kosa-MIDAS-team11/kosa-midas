@@ -1,3 +1,4 @@
+import Header from '../commmon/Header';
 import * as S from './DivisionListStyle';
 export default function DivisionList() {
   const sampleData = [
@@ -17,9 +18,7 @@ export default function DivisionList() {
   ]
   return (
     <S.Container>
-      <S.Header>
-        <S.Title>With Office</S.Title>
-      </S.Header>
+      <Header />
       <S.ContentWrap>
         <S.DivListWrap>
           <S.DivList>

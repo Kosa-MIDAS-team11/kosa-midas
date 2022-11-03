@@ -113,7 +113,8 @@ pre,
 span,
 input,
 select,
-strong {
+strong,
+div {
 	color: rgb(241, 241, 241);
 	font-family: 'Inter', sans-serif;
 }
