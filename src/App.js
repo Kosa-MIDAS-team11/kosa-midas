@@ -10,7 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/division" element={<DivisionList />} />
         <Route path="/" element={<HomePage />} />
-        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/mypage/:id" element={<MyPage />} />
       </Routes>
     </S.Container>
   );
